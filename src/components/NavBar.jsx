@@ -1,19 +1,29 @@
-function NavBar() {
+import { Link } from "react-router-dom";
+import { poketradingLogo } from "../assets/poketrading.png";
+
+function Navbar() {
     return (
-    <>
-      <div>
-        <h1>PokeTrading</h1>
-        <a href="">
-          <img src={poketradingLogo} className="logo" alt="PokeTrading logo" />
-        </a>
+      <nav className="navbar">
+        <Link><img
+            src={ poketradingLogo }
+            className="navbar-logo"
+            alt="Poketrading logo"
+          /></Link>
         <ul>
-          <li>Home</li>
-          <li>Pokemon</li>
-          <li>Estadisticas</li>
-          <li>Favoritos</li>
+          <li>
+            <Link to='/'> Inicio </Link>
+          </li>
+          <li>
+            <Link to='/pokemon'> Pokemon </Link>
+          </li>
+          <li>
+            <Link to='/pokemondetail'> Estadisticas </Link>
+          </li>
+          <li>
+            <Link to='/favorite'> Favoritos </Link>
+          </li>
         </ul>
-      </div>
-    </>
+      </nav>
   )
 }
-export default NavBar;
+export default Navbar;
