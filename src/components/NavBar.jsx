@@ -5,30 +5,38 @@ import poketradingLogo from "../assets/poketrading.png";
 import "../styles/NavBar.css";
 
 function Navbar() {
-  // const [open, setOpen] = useState(flase);
+  const [open, setOpen] = useState(false); //menu desplegable
+  const mostrarBarra = () => {
+  setOpen(!open);
+  };
+
     return (
       <nav className="navbar">
         <div className="container-navbar">
-          <Link><img
+          <Link to='/'><img
               src={ poketradingLogo }
               className="logo-navbar"
               alt="Poketrading logo"
             /></Link>
-          <ul className="links-navbar">
+          <ul className={`links-navbar ${open ? 'active' : ''}`}>
             <li>
-              <Link to='/'> Inicio </Link>
+              <Link to='/' onClick={mostrarBarra}> Inicio </Link>
             </li>
             <li>
-              <Link to='/pokemon'> Pokemon </Link>
+              <Link to='/pokemon' onClick={mostrarBarra}> Pokemon </Link>
             </li>
             <li>
-              <Link to='/pokemondetail'> Estadisticas </Link>
+              <Link to='/pokemondetail' onClick={mostrarBarra}> Estadisticas </Link>
             </li>
             <li>
-              <Link to='/favorite'> Favoritos </Link>
+              <Link to='/favorite' onClick={mostrarBarra}> Favoritos </Link>
             </li>
-            <button id="menu-toggle" onClick={() => setOpen(!open)}>☰</button>
           </ul>
+          <button className={`menu-btn ${open ? "active" : ""}`} onClick={mostrarBarra}>
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
         </div>
       </nav>
   )
