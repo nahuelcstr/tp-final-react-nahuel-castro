@@ -9,8 +9,11 @@ function Navbar() {
   const mostrarBarra = () => {
   setOpen(!open);
   };
-
+  useEffect(() => {
+  document.body.style.overflow = open ? "hidden" : "auto";
+}, [open]);
     return (
+      <>
       <nav className="navbar">
         <div className="container-navbar">
           <Link to='/'><img
@@ -39,6 +42,7 @@ function Navbar() {
           </button>
         </div>
       </nav>
+      </>
   )
 }
 export default Navbar;
