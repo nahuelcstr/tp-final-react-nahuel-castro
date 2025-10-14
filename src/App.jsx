@@ -6,6 +6,7 @@ import PokemonDetail from "./pages/PokemonDetail";
 import Favorite from "./pages/Favorite";
 //componentes
 import Navbar from "./components/NavBar";
+import Buscador from "./components/inputBuscar";
 //css
 import './App.css';
 

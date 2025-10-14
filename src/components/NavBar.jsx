@@ -5,10 +5,13 @@ import poketradingLogo from "../assets/poketrading.png";
 import "../styles/NavBar.css";
 
 function Navbar() {
-  const [open, setOpen] = useState(false); //menu desplegable
+  const [open, setOpen] = useState(false); //estado del menu
   const mostrarBarra = () => {
-  setOpen(!open);
+    if (window.innerWidth <= 768) { // solo alterna el menú si es mobile
+    setOpen(!open);
+  }
   };
+  //bloquear el scroll
   useEffect(() => {
   document.body.style.overflow = open ? "hidden" : "auto";
 }, [open]);

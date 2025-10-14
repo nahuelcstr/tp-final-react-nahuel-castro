@@ -1,3 +1,5 @@
+import Buscador from "../components/inputBuscar";
+
 function Pokemon(){
     return(
         <div>
