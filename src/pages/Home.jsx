@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import "../styles/home.css";
-import ButtonTypes from "../components/ButtonTypes";
+import TypeButtons from "../components/TypeButtons";
 
 
 function Home(){
@@ -21,7 +21,8 @@ function Home(){
                     <Link to='/favorite' className="btn-fav">Mis favoritos</Link>
                 </div>
                 <div className="filter">
-                    
+                    <h2>Filtrar por tipo</h2>
+                    <TypeButtons />
                 </div>
             </div>
         </section>
