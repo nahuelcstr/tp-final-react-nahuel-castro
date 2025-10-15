@@ -9,7 +9,7 @@ function Home(){
         <section className="home">
             <div className="home-container">
                 <div className="home-text">
-                    <h1>Pokewiki</h1>
+                    <h1>Pokéwiki</h1>
                     <p>
                         Bienvenido a <strong>Pokéwiki</strong>, tu enciclopedia Pokémon
                         interactiva. Explorá información de cada Pokémon, sus habilidades,
