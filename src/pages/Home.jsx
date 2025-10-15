@@ -17,7 +17,7 @@ function Home(){
                     </p>
                 </div>
                 <div className="home-links">
-                    <Link to='/pokemon' className="btn-todos">Ver todos</Link>
+                    <Link to='/pokemons' className="btn-todos">Ver todos</Link>
                     <Link to='/favorite' className="btn-fav">Mis favoritos</Link>
                 </div>
                 <div className="filter">

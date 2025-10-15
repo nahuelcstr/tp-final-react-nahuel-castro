@@ -29,10 +29,7 @@ function Navbar() {
               <Link to='/' onClick={mostrarBarra}> Inicio </Link>
             </li>
             <li>
-              <Link to='/pokemon' onClick={mostrarBarra}> Pokemon </Link>
-            </li>
-            <li>
-              <Link to='/pokemondetail' onClick={mostrarBarra}> Estadisticas </Link>
+              <Link to='/pokemons' onClick={mostrarBarra}> Pokemons </Link>
             </li>
             <li>
               <Link to='/favorite' onClick={mostrarBarra}> Favoritos </Link>

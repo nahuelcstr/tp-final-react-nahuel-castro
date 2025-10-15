@@ -1,12 +1,15 @@
 import "../styles/TypeButtons.css";
+import { useLocation } from "react-router-dom";
 
 function TypesButtons({typeSelect}){
     const types = [ "normal", "fire", "water", "grass", "electric", "ice", "fighting", "poison", "ground",
     "flying", "psychic","bug", "rock", "ghost", "dragon", "dark", "steel", "fairy"];
-    console.log("Renderizando botones...");
-    console.log(types);
+    
+    //Verifica el path para aplicar diferentes estilos dependiendo de la ruta.
+    const location = useLocation();
+    const isPokemonPage = location.pathname.includes("/pokemons");
     return(
-        <div className="container-buttons">
+        <div className={`container-buttons ${isPokemonPage ? "pokemons-style" : "home-style"}`}>
             {types.map((type) => (
                 <button
                     key={type}

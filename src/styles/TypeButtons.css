@@ -19,7 +19,7 @@
     --type-fairy: #F0B6BC;
 }
 
-.container-buttons{
+.container-buttons.home-style{
     display: flex;
     gap: 1rem;
     flex-wrap: wrap;
@@ -42,8 +42,8 @@
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.39); 
 }
 .btn-type:active {
-  transform: translateY(2px);
-  box-shadow: 0 0 0 rgba(0, 0, 0, 0.1);
+    transform: translateY(2px);
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0.1);
 }
 
 /* Colores por tipo */
@@ -65,3 +65,12 @@
 .dragon   { background-color: var(--type-dragon); }
 .steel    { background-color: var(--type-steel); }
 .fairy    { background-color: var(--type-fairy); color: var(--clr-black);}
+
+/* estilos para Pokemon page */
+.container-buttons.pokemons-style{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    max-width: 97vw;
+}
