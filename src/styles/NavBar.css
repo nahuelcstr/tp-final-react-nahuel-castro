@@ -80,8 +80,11 @@ section {
 
 @media (max-width: 768px) {
 	.logo-navbar {
-		width: 130px;
+		width: 60px;
 		height: auto;
+		transition: transform 0.3s ease;
+		overflow: hidden;
+		padding: 0.3rem;
 	}
 	.container-navbar {
 		padding: 0 2rem;
