@@ -1,0 +1,15 @@
+.footer {
+	background-color: var(--clr-black);
+	color: var(--clr-white);
+	padding: 20px;
+	text-align: center;
+	font-size: 0.9rem;
+	border-top: 2px solid #444;
+	width: 95vw;
+	position: relative;
+	bottom: 0;
+}
+
+.footer-text {
+	margin: 6px 0;
+}

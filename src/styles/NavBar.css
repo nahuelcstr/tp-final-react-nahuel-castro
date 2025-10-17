@@ -1,119 +1,118 @@
-
-.logo-navbar{
-    width: 200px;
-    height: auto;
-    transition: transform 0.3s ease;
+.logo-navbar {
+	width: 60px;
+	height: auto;
+	transition: transform 0.3s ease;
+	overflow: hidden;
+	padding: 0.3rem;
 }
 .logo-navbar:hover {
-    transform: scale(1.05);
+	transform: scale(1.05);
 }
-.navbar{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    background-color: var(--clr-red);
-    
+.navbar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 1000;
+	background-color: var(--clr-red);
 }
 
-.container-navbar{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 5rem; /*cambiar en mobile*/
-    margin: 0 auto;
+.container-navbar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 5rem; /*cambiar en mobile*/
+	margin: 0 auto;
 }
-.links-navbar{
-    list-style: none;
-    display: flex;
-    gap: 1.5rem;
+.links-navbar {
+	list-style: none;
+	display: flex;
+	gap: 1.5rem;
 }
 .links-navbar a {
-    color: var(--clr-white);
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s;
+	color: var(--clr-white);
+	text-decoration: none;
+	font-weight: bold;
+	transition: color 0.3s;
 }
-.links-navbar a:hover{
-    color: var(--clr-yellow);
-    transform: scale(2px);
-    transition: all 1s ;
-    }
-button{
-    display: none;
+.links-navbar a:hover {
+	color: var(--clr-yellow);
+	transform: scale(2px);
+	transition: all 1s;
 }
-.menu-btn{
-    flex-direction: column;
-    justify-content: space-between;
-    width: 28px;
-    height: 22px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0;
-    z-index: 1100;
+button {
+	display: none;
 }
-.menu-btn span{
-    display: block;
-    height: 3px;
-    width: 100%;
-    background: var(--clr-white);
-    border-radius: 2px;
-    transition: all 0.3s ease;
-    transform-origin: center;
+.menu-btn {
+	flex-direction: column;
+	justify-content: space-between;
+	width: 28px;
+	height: 22px;
+	background: none;
+	border: none;
+	cursor: pointer;
+	padding: 0;
+	z-index: 1100;
+}
+.menu-btn span {
+	display: block;
+	height: 3px;
+	width: 100%;
+	background: var(--clr-white);
+	border-radius: 2px;
+	transition: all 0.3s ease;
+	transform-origin: center;
 }
 .menu-btn.active span:nth-child(1) {
-    transform: rotate(45deg) translate(7px, 6px);
+	transform: rotate(45deg) translate(7px, 6px);
 }
 
 .menu-btn.active span:nth-child(2) {
-    opacity: 0;
+	opacity: 0;
 }
 
 .menu-btn.active span:nth-child(3) {
-    transform: rotate(-45deg) translate(7px, -6px);
+	transform: rotate(-45deg) translate(7px, -6px);
 }
-section{
-    height: 100vh;
-    
+section {
+	height: 100vh;
 }
 
 @media (max-width: 768px) {
-    .logo-navbar{
-        width: 130px;
-        height: auto;
-    }
-    .container-navbar{
-        padding: 0 2rem;
-    }
-    .links-navbar {
-        position: absolute;
-        top: 0px;
-        left: 0;
-        right: 0;
-        background-color: var(--clr-red);
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 2rem;
-        transform: translateX(-100%);
-        opacity: 0;
-        pointer-events: none;
-        transition: all 0.3s ease;
-        height: 100vh;
-    }
-    ul{
-        padding: 0;
-    }
-    .links-navbar.active {
-        margin: 0;
-        transform: translateY(0);
-        opacity: 1;
-        pointer-events: all;
-    }
-    .menu-btn{
-        display: flex;
-        z-index: 10000;
-    }
+	.logo-navbar {
+		width: 130px;
+		height: auto;
+	}
+	.container-navbar {
+		padding: 0 2rem;
+	}
+	.links-navbar {
+		position: absolute;
+		top: 0px;
+		left: 0;
+		right: 0;
+		background-color: var(--clr-red);
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 2rem;
+		transform: translateX(-100%);
+		opacity: 0;
+		pointer-events: none;
+		transition: all 0.3s ease;
+		height: 100vh;
+	}
+	ul {
+		padding: 0;
+	}
+	.links-navbar.active {
+		margin: 0;
+		transform: translateY(0);
+		opacity: 1;
+		pointer-events: all;
+	}
+	.menu-btn {
+		display: flex;
+		z-index: 10000;
+	}
 }

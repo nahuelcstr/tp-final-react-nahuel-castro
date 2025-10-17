@@ -14,7 +14,7 @@ function PokemonList() {
 		}
 	}, [dispatch, list.length]);
 
-	// aca incrementamos el offset y pedimos más Pokémon
+	// Aca incrementamos el offset y pedimos más Pokémon
 	const handleLoadMore = () => {
 		const newOffset = offset + 20;
 		dispatch(incrementOffset()); // Actualiza el estado
