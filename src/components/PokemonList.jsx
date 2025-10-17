@@ -7,21 +7,26 @@ function PokemonList() {
 	const dispatch = useDispatch();
 	const { list, offset, status, error } = useSelector((state) => state.pokemon);
 
+	// Carga inicial al cargar componente
 	useEffect(() => {
-		dispatch(fetchPokemons({ limit: 20, offset }));
-	}, [dispatch, offset]);
+		if (list.length === 0) {
+			dispatch(fetchPokemons({ limit: 20, offset: 0 }));
+		}
+	}, [dispatch, list.length]);
 
+	// aca incrementamos el offset y pedimos más Pokémon
 	const handleLoadMore = () => {
-		dispatch(incrementOffset());
+		const newOffset = offset + 20;
+		dispatch(incrementOffset()); // Actualiza el estado
+		dispatch(fetchPokemons({ limit: 20, offset: newOffset })); // Trae los siguientes 20
 	};
-	console.log(list);
 
 	return (
-		<div className="pokemon-grid">
+		<div className="pokemon-container">
 			{list.map((poke) => (
 				<div key={poke.id} className="pokemon-card">
-					<h3>
-						#{poke.id} {poke.name}
+					<h3 className="pokemon-card-text">
+						{poke.name} #{poke.id}
 					</h3>
 					<img
 						className="pokemon-image"
@@ -30,8 +35,8 @@ function PokemonList() {
 					/>
 					<p>
 						<strong></strong>{" "}
-						{poke.types.map((t) => (
-							<span key={t} className={`btn-type-card ${t.type.name}`}>
+						{poke.types.map((t, i) => (
+							<span key={i} className={`btn-type-card ${t.type.name}`}>
 								{t.type.name}
 							</span>
 						))}
@@ -43,7 +48,10 @@ function PokemonList() {
 						<strong>Altura:</strong> {poke.height / 10} m
 					</p>
 					<p>
-						<strong>Habilidad:</strong> {poke.abilities[0]?.ability.name}
+						<strong>Habilidad:</strong>{" "}
+						<span className="pokemon-card-text">
+							{poke.abilities[0]?.ability.name}
+						</span>
 					</p>
 				</div>
 			))}

@@ -3,11 +3,12 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 export const fetchPokemons = createAsyncThunk(
 	"pokemon/fetchPokemons",
 	async ({ limit = 20, offset = 0 }) => {
+		// Primer fetch: lista básica con nombre y URL
 		const res = await fetch(
 			`https://pokeapi.co/api/v2/pokemon?limit=${limit}&offset=${offset}`
 		);
 		const data = await res.json();
-
+		// Segundo fetch: detalles de cada Pokémon
 		const detailedPromises = data.results.map(async (pokemon) => {
 			const res = await fetch(pokemon.url);
 			return await res.json();
