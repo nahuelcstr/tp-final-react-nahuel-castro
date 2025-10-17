@@ -1,26 +1,51 @@
 import "../styles/TypeButtons.css";
 import { useLocation } from "react-router-dom";
 
-function TypesButtons({typeSelect}){
-    const types = [ "normal", "fire", "water", "grass", "electric", "ice", "fighting", "poison", "ground",
-    "flying", "psychic","bug", "rock", "ghost", "dragon", "dark", "steel", "fairy", "ver todos"];
-    
-    //Verifica el path para aplicar diferentes estilos dependiendo de la ruta.
-    const location = useLocation();
-    const isPokemonPage = location.pathname.includes("/pokemons");
-    return(
-        <div className={`container-buttons ${isPokemonPage ? "pokemons-style" : "home-style"}`}>
-            {types.map((type) => (
-                <button
-                    key={type}
-                    className={`btn-type ${type} ${isPokemonPage ? "pokemons-style" : "home-style"}`}
-                    onClick={() => typeSelect?.(type)}
-                >
-            {type}
-        </button>
-        ))}
-        </div>
-    )
+function TypesButtons({ typeSelect }) {
+	const types = [
+		"normal",
+		"fire",
+		"water",
+		"grass",
+		"electric",
+		"ice",
+		"fighting",
+		"poison",
+		"ground",
+		"flying",
+		"psychic",
+		"bug",
+		"rock",
+		"ghost",
+		"dragon",
+		"dark",
+		"steel",
+		"fairy",
+		"ver todos",
+	];
+
+	//Verifica el path para aplicar diferentes estilos dependiendo de la ruta.
+	const location = useLocation();
+	const isPokemonPage = location.pathname.includes("/pokemons");
+	return (
+		<div
+			className={`container-buttons ${
+				isPokemonPage ? "pokemons-style" : "home-style"
+			}`}
+		>
+			{types.map((type) => (
+				<button
+					key={type}
+					className={`btn-type ${type} ${
+						isPokemonPage ? "pokemons-style" : "home-style"
+					}`}
+					onClick={() => typeSelect?.(type)}
+				>
+					{type}
+				</button>
+			))}
+		</div>
+	);
 }
 export default TypesButtons;
 

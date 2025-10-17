@@ -1,93 +1,137 @@
 :root {
-    --type-normal: #A8A878;
-    --type-fire: #F08030;
-    --type-water: #6890F0;
-    --type-grass: #78C850;
-    --type-electric: #F8D030;
-    --type-ice: #98D8D8;
-    --type-fighting: #C03028;
-    --type-poison: #A040A0;
-    --type-ground: #E0C068;
-    --type-flying: #A890F0;
-    --type-psychic: #F85888;
-    --type-bug: #A8B820;
-    --type-rock: #B8A038;
-    --type-ghost: #705898;
-    --type-dark: #705848;
-    --type-dragon: #7038F8;
-    --type-steel: #B8B8D0;
-    --type-fairy: #F0B6BC;
+	--type-normal: #a8a878;
+	--type-fire: #f08030;
+	--type-water: #6890f0;
+	--type-grass: #78c850;
+	--type-electric: #f8d030;
+	--type-ice: #98d8d8;
+	--type-fighting: #c03028;
+	--type-poison: #a040a0;
+	--type-ground: #e0c068;
+	--type-flying: #a890f0;
+	--type-psychic: #f85888;
+	--type-bug: #a8b820;
+	--type-rock: #b8a038;
+	--type-ghost: #705898;
+	--type-dark: #705848;
+	--type-dragon: #7038f8;
+	--type-steel: #b8b8d0;
+	--type-fairy: #f0b6bc;
 }
 
-.container-buttons.home-style{
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-    justify-content: center;
+.container-buttons.home-style {
+	display: flex;
+	gap: 1rem;
+	flex-wrap: wrap;
+	justify-content: center;
 }
-.btn-type{
-    display: block;
-    padding: 0.5rem 1rem;
-    border: none;
-    border-radius: 50px;
-    font-weight: bold;
-    color: #fff;
-    cursor: pointer;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    text-transform: uppercase;
+.btn-type {
+	display: block;
+	padding: 0.5rem 1rem;
+	border: none;
+	border-radius: 50px;
+	font-weight: bold;
+	color: #fff;
+	cursor: pointer;
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
+	text-transform: uppercase;
 }
 
 .btn-type:hover {
-    transform: translateY(2px);
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.39); 
+	transform: translateY(2px);
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.39);
 }
 .btn-type:active {
-    transform: translateY(2px);
-    box-shadow: 0 0 0 rgba(0, 0, 0, 0.1);
+	transform: translateY(2px);
+	box-shadow: 0 0 0 rgba(0, 0, 0, 0.1);
 }
 
 /* Colores por tipo */
-.normal   { background-color: var(--type-normal); }
-.fire     { background-color: var(--type-fire); }
-.water    { background-color: var(--type-water); }
-.grass    { background-color: var(--type-grass); }
-.electric { background-color: var(--type-electric); color: var(--clr-black);}
-.ice      { background-color: var(--type-ice); }
-.fighting { background-color: var(--type-fighting); }
-.poison   { background-color: var(--type-poison); }
-.ground   { background-color: var(--type-ground); color: var(--clr-black);}
-.flying   { background-color: var(--type-flying); }
-.psychic  { background-color: var(--type-psychic); }
-.bug      { background-color: var(--type-bug); }
-.rock     { background-color: var(--type-rock); }
-.ghost    { background-color: var(--type-ghost); }
-.dark     { background-color: var(--type-dark); }
-.dragon   { background-color: var(--type-dragon); }
-.steel    { background-color: var(--type-steel); }
-.fairy    { background-color: var(--type-fairy); color: var(--clr-black);}
-.ver.todos.home-style {display:none; background-color: var(--clr-black); color: var(--clr-white);}
+.normal {
+	background-color: var(--type-normal);
+}
+.fire {
+	background-color: var(--type-fire);
+}
+.water {
+	background-color: var(--type-water);
+}
+.grass {
+	background-color: var(--type-grass);
+}
+.electric {
+	background-color: var(--type-electric);
+	color: var(--clr-black);
+}
+.ice {
+	background-color: var(--type-ice);
+}
+.fighting {
+	background-color: var(--type-fighting);
+}
+.poison {
+	background-color: var(--type-poison);
+}
+.ground {
+	background-color: var(--type-ground);
+	color: var(--clr-black);
+}
+.flying {
+	background-color: var(--type-flying);
+}
+.psychic {
+	background-color: var(--type-psychic);
+}
+.bug {
+	background-color: var(--type-bug);
+}
+.rock {
+	background-color: var(--type-rock);
+}
+.ghost {
+	background-color: var(--type-ghost);
+}
+.dark {
+	background-color: var(--type-dark);
+}
+.dragon {
+	background-color: var(--type-dragon);
+}
+.steel {
+	background-color: var(--type-steel);
+}
+.fairy {
+	background-color: var(--type-fairy);
+	color: var(--clr-black);
+}
+.ver.todos.home-style {
+	display: none;
+	background-color: var(--clr-black);
+	color: var(--clr-white);
+}
 
 /* estilos para Pokemon page */
-.container-buttons.pokemons-style{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 1rem;
-    max-width: 97vw;
+.container-buttons.pokemons-style {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 1rem;
+	max-width: 97vw;
+	margin-top: 6rem;
 }
-.btn-type.pokemon-style{
-    display: block;
-    padding: 0.5rem 1rem;
-    border: none;
-    border-radius: 50px;
-    font-weight: bold;
-    color: #fff;
-    cursor: pointer;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    text-transform: uppercase;
+.btn-type.pokemon-style {
+	display: block;
+	padding: 0.5rem 1rem;
+	border: none;
+	border-radius: 50px;
+	font-weight: bold;
+	color: #fff;
+	cursor: pointer;
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
+	text-transform: uppercase;
 }
-.ver.todos.pokemons-style{
-    display:block;
-    background-color: var(--clr-black); 
-    color: var(--clr-white);
+.ver.todos.pokemons-style {
+	display: block;
+	background-color: var(--clr-black);
+	color: var(--clr-white);
 }
